@@ -19,19 +19,19 @@ int main(){
 }
 
 void shuffle(int &w,int &x,int &y,int &z){
-	int a[4]={w,x,y,z};
-	int b[4] = {0,0,0,0};
+	int f[4]={w,x,y,z};
+	int g[4] = {0,0,0,0};
 	for(int i=0;i<4;i++){
-		b[i] = rand()%4;
+		g[i] = rand()%4;
 		for(int j = 0;j<i;j++){
-			if(b[i] == b[j]){
+			if(g[i] == g[j]){
 				i--;
 				break;
 			}
 		}
 	}
-	w = a[b[0]];
-	x = a[b[1]];
-	y = a[b[2]];
-	z = a[b[3]];
+	w = f[g[0]];
+	x = f[g[1]];
+	y = f[g[2]];
+	z = f[g[3]];
 }
